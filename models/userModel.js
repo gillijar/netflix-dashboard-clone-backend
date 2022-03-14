@@ -10,6 +10,10 @@ const UserSchema = new mongoose.Schema({
     type: mongoose.Schema.ObjectId,
     ref: "accountOwner",
   },
+  avatar: {
+    type: String,
+    default: "avatar-1",
+  },
 });
 
 const User = mongoose.model("user", UserSchema);
