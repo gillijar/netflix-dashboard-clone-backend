@@ -14,6 +14,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: "avatar-1",
   },
+  list: [Object],
 });
 
 const User = mongoose.model("user", UserSchema);
