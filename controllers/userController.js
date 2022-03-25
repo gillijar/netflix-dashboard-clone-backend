@@ -76,30 +76,6 @@ exports.updateUser = async (req, res) => {
   }
 };
 
-// exports.removeListItem = async (req, res) => {
-//   try {
-//     const user = await User.findByIdAndUpdate(
-//       req.params.id,
-//       {
-//         $pull: { list: { id: req.body.listId } },
-//       },
-//       { new: true, runValidators: true }
-//     );
-
-//     res.status(201).json({
-//       status: "success",
-//       data: {
-//         user,
-//       },
-//     });
-//   } catch (err) {
-//     res.status(400).json({
-//       status: "fail",
-//       message: err,
-//     });
-//   }
-// };
-
 exports.deleteUser = async (req, res) => {
   try {
     await User.findByIdAndDelete(req.params.id);
