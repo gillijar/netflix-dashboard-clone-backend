@@ -4,9 +4,15 @@ const AccountSchema = new mongoose.Schema(
   {
     localId: {
       type: String,
+      unique: true,
     },
     email: {
       type: String,
+      unique: true,
+    },
+    role: {
+      type: String,
+      default: "user",
     },
   },
   {
